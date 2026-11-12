@@ -102,4 +102,4 @@ p { margin: 0 0 1em; }
 .badge-piste { color: var(--prune); }
 .a-completer { background: #FFF1A8; color: #2B0F19; padding: 0 .25em; border-radius: 4px; }
 /* Bouton principal posé sur un bandeau bordeaux : rose poudré, texte encre */
-.couverture .bouton.corail, .hero .bouton.corail, header .bouton.corail { background: #E7C5BD; color: #282324; }
+.couverture .bouton.corail, .hero .bouton.corail, header .bouton.corail, .fin .bouton.corail { background: #E7C5BD; color: #282324; }
