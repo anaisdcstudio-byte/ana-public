@@ -1,0 +1,103 @@
+/* Ana Success Story — charte : crème #F7F0EA, rose poudré #E7C5BD, bordeaux #6B263E, encre #282324, champagne #B68A58
+   Mise en page : colonne de lecture centrée (~65 caractères), bandes bordeaux pleine largeur pour les temps forts. */
+:root {
+  --creme: #F7F0EA;        /* fond crème */
+  --sable: #F0DCD5;        /* aplat rose poudré léger */
+  --surface: #FFFDFB;      /* cartes */
+  --encre: #282324;        /* texte */
+  --encre-doux: #5E5254;   /* texte secondaire */
+  --corail: #6B263E;       /* accent principal : bordeaux */
+  --corail-doux: #F4E4E3;  /* bordeaux très clair */
+  --prune: #8E6A40;        /* champagne foncé (étiquettes, lisible) */
+  --champagne: #B68A58;    /* filets et détails */
+  --vert: #3F7255;
+  --vert-doux: #E4EFE8;
+  --ligne: #E9D9D0;
+  --sur-accent: #F7F0EA;   /* texte posé sur l'accent */
+  --hero-bg: #4E1A2C;
+  --hero-bg-2: #6B263E;
+  --hero-fg: #F7F0EA;
+  --hero-doux: #E7C5BD;
+  --hero-accent: #E7C5BD;
+  --hero-ligne: rgba(248, 237, 232, .28);
+  --rayon: 14px;
+  --ombre: 0 10px 30px rgba(43, 15, 25, .07);
+  --titre: "Bodoni Moda", "Didot", Georgia, serif;
+  --texte: "Manrope", "Helvetica Neue", Arial, sans-serif;
+  --signature: "Pinyon Script", "Snell Roundhand", cursive;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --creme: #1E1718; --sable: #2E2224; --surface: #271D1F; --encre: #F7F0EA; --encre-doux: #D6C4C0;
+    --corail: #E7C5BD; --corail-doux: #3A2228; --prune: #D2AC7E; --champagne: #C9A27A;
+    --vert: #8CC7A4; --vert-doux: #1D2E25; --ligne: #3E2E30; --sur-accent: #282324;
+    --hero-bg: #2C0F19; --hero-bg-2: #5A1F34; --ombre: 0 10px 30px rgba(0, 0, 0, .35);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --creme: #1E1718; --sable: #2E2224; --surface: #271D1F; --encre: #F7F0EA; --encre-doux: #D6C4C0;
+  --corail: #E7C5BD; --corail-doux: #3A2228; --prune: #D2AC7E; --champagne: #C9A27A;
+  --vert: #8CC7A4; --vert-doux: #1D2E25; --ligne: #3E2E30; --sur-accent: #282324;
+  --hero-bg: #2C0F19; --hero-bg-2: #5A1F34; --ombre: 0 10px 30px rgba(0, 0, 0, .35);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+body {
+  margin: 0;
+  background: var(--creme);
+  color: var(--encre);
+  font-family: var(--texte);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--corail); }
+.conteneur {
+  max-width: 720px; margin: 0 auto;
+  padding-left: max(18px, env(safe-area-inset-left, 0px));
+  padding-right: max(18px, env(safe-area-inset-right, 0px));
+}
+h1, h2, h3 { font-family: var(--titre); line-height: 1.12; margin: 0 0 .5em; text-wrap: balance; font-weight: 700; }
+h1 { font-size: clamp(2.3rem, 8vw, 3.6rem); letter-spacing: -.015em; }
+h2 { font-size: clamp(1.7rem, 5.5vw, 2.3rem); letter-spacing: -.01em; }
+h3 { font-size: 1.25rem; font-weight: 600; }
+p { margin: 0 0 1em; }
+.surtitre {
+  display: inline-flex; align-items: center; gap: .7em;
+  font-size: .74rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--prune); margin-bottom: .9em;
+}
+.surtitre::before { content: ""; width: 28px; height: 1px; background: var(--champagne); }
+.pastille {
+  display: inline-block; padding: .4em 1em; border-radius: 999px;
+  border: 1px solid var(--hero-accent); color: var(--hero-accent);
+  font-size: .74rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+}
+.accent { color: var(--corail); }
+.bouton {
+  display: inline-flex; align-items: center; justify-content: center; gap: .6em;
+  background: var(--encre); color: var(--creme);
+  font-family: var(--texte); font-weight: 700; font-size: .95rem; letter-spacing: .02em;
+  padding: 1em 1.7em; border-radius: 999px; border: 0; cursor: pointer;
+  text-decoration: none; transition: transform .15s ease, opacity .15s ease;
+}
+.bouton:hover { transform: translateY(-1px); opacity: .92; }
+.bouton:focus-visible, button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid var(--champagne); outline-offset: 3px; }
+.bouton.corail { background: var(--corail); color: var(--sur-accent); }
+.bouton.contour { background: transparent; color: var(--encre); border: 1.5px solid var(--encre); }
+.carte {
+  background: var(--surface); border: 1px solid var(--ligne); border-radius: var(--rayon);
+  padding: 24px; box-shadow: var(--ombre);
+}
+.petit { font-size: .86rem; color: var(--encre-doux); }
+.note-legale { font-size: .78rem; color: var(--encre-doux); }
+.badge-doc, .badge-piste {
+  display: inline-block; font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  padding: .2em .7em; border-radius: 999px; border: 1px solid currentColor;
+}
+.badge-doc { color: var(--vert); }
+.badge-piste { color: var(--prune); }
+.a-completer { background: #FFF1A8; color: #2B0F19; padding: 0 .25em; border-radius: 4px; }

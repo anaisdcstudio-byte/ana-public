@@ -1,9 +1,12 @@
-# Ana Success Story · ressources visuelles
+# Ana Success Story · ressources
 
-Brief et prompts pour générer les images de la marque (fichiers texte bruts, lisibles par ChatGPT).
+Fichiers texte bruts, lisibles par ChatGPT.
 
-- Brief : https://raw.githubusercontent.com/anaisdcstudio-byte/ana-public/main/brief.md
-- Prompts par lots : https://raw.githubusercontent.com/anaisdcstudio-byte/ana-public/main/prompts.md
+- Brief de marque : https://raw.githubusercontent.com/anaisdcstudio-byte/ana-public/main/brief.md
+- Prompts d'images par lots : https://raw.githubusercontent.com/anaisdcstudio-byte/ana-public/main/prompts.md
+- Page Commence ici (HTML) : https://raw.githubusercontent.com/anaisdcstudio-byte/ana-public/main/site/index.html
+- Guide « Tes 7 premiers pas » (HTML) : https://raw.githubusercontent.com/anaisdcstudio-byte/ana-public/main/site/guide/index.html
+- Charte CSS : https://raw.githubusercontent.com/anaisdcstudio-byte/ana-public/main/site/assets/ana.css
 
 ## Visuels de référence (style)
 - https://raw.githubusercontent.com/anaisdcstudio-byte/ana-public/main/a-la-une/a-la-une-histoire.png
